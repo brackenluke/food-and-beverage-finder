@@ -1,0 +1,59 @@
+/* style.css */
+
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+p {
+    margin: 15px 15px;
+}
+
+button {
+    display: ingline-block;
+    margin: 12px;
+    cursor: pointer;
+    color: grey;
+    background-color: darkblue;
+    border-radius: 5px;
+    border: 0;
+    padding: 15px;
+
+}
+
+button:hover {
+    background-color: blue;
+}
+
+input[type="text"] {
+    font-size: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+ol {
+    padding-left: 20px;
+    max-height: 650px;
+    overflow: auto;
+}
+
+li {
+    padding: 10px;
+}
+
+li:nth-child(odd) {
+    background-color: lightpink;
+}
+
+@media screen and (max-width: 768px) {
+    .containerNew {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .containerNew {
+        width: 90%;
+    }
+}
