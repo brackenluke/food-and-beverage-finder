@@ -4,94 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food&Bev-Finder.com</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #e4d8b1; /* Fawn color for the background */
-        }
+    <link rel="stylesheet" href="https://cdn.tailwindcss.com/">
 
-        #banner {
-            width: 100%;
-            height: 300px; /* Adjust the height as needed */
-            background: url('your-banner-image.jpg') center/cover;  /*This is where the image will go*/
-            text-align: center;
-            color: #720b0b;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        #search-container {
-            text-align: center;
-            padding: 20px;
-            position: relative;
-            top: -50px; /* Adjust the positioning as needed */
-        }
-
-        #search-bar {
-            padding: 10px;
-            font-size: 16px;
-            width: 300px;
-        }
-
-        #instructions {
-            text-align: center;
-            padding: 20px;
-        }
-
-        #bottom-content {
-            position: relative;
-            top: -50px; /* Adjust the positioning as needed */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .bottom-image {
-            max-width: 200px;
-            max-height: 150px;
-        }
-
-        .text-box {
-            max-width: 200px;
-            padding: 10px;
-            background-color: #fff; /* White background for text boxes */
-        }
-    </style>
 </head>
 <body>
-
     <div id="banner">
-        <h1>Welcome to Your Recipes</h1>
+        <div>
+            <h1>Welcome to Your Recipes</h1>
+        </div>
     </div>
 
     <div id="search-container">
+      <div>
         <p>Enter Ingredients here</p>
+      </div>
+
+      <div>
         <input type="text" id="search-bar" placeholder="Search...">
+      </div>
     </div>
 
-
-    <div id="bottom-content">
-       
+    <div id="bottom-content"> 
         <div class="text-box">
-            <img src="your-image1.jpg" alt="Image 1" class="bottom-image">
+            <div>
+                <img src="your-image1.jpg" alt="Image 1" class="bottom-image">
+            </div>
         </div>
         <div class="text-box">
-            <p>Text Box 1</p>
+            <div>
+                <p>Text Box 1</p>
+            </div>
         </div>
         <div class="text-box">
-            <p>Text Box 1</p>
+            <div>
+                <p>Text Box 2</p>
+            </div>
         </div>
         <div class="text-box">
-            <img src="your-image2.jpg" alt="Image 2" class="bottom-image">
+            <div>
+                <img src="your-image2.jpg" alt="Image 2" class="bottom-image">
+            </div>
         </div>
-        
     </div>
 
+    <script src="https://cdn.tailwindcss.com/"></script>
 </body>
 </html>
-
-<!--test comment-->
