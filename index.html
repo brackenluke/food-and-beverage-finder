@@ -1,69 +1,97 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food&Bev-Finder.com</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #e4d8b1; /* Fawn color for the background */
+        }
 
-<html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <title>Recipie Maker</title>
-        <link rel="stylesheet" href="/assets/style.css">
-        <script src="https://cdn.tailwindcss.com"></script>
-    </head>
-    <Body>
-        <div>
-            <div>
-                <nav>
-                    <div>
-                        <h1>
-                            <a href="/">Recipe Placeholder</a>
-                        </h1>
-                    </div>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <span>Home</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span>Recipe Gen</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span>Information/About</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <main>
-                <div>
-                    <button>Food</button>
-                    <button>Cocktails</button>
-                    <button>Home</button>
-                </div>
+        #banner {
+            width: 100%;
+            height: 300px; /* Adjust the height as needed */
+            background: url('your-banner-image.jpg') center/cover;  /*This is where the image will go*/
+            text-align: center;
+            color: #720b0b;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
-                <header>
-                    <h2>Recipe Gen</h2>
-                    <h3>Recipe Recommendations</h3>
-                </header>
+        #search-container {
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            top: -50px; /* Adjust the positioning as needed */
+        }
 
-                <div>
-                    <h4>Latest Recipes</h4>
+        #search-bar {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+        }
 
-                    <div>
-                    <!--Recipe Cards go Here-->
-                        <div>
-                        <!--Recipe images-->
-                            <div>
-                                <span><!--Recipe Title PlaceHolder--></span>
-                                <span><!--Recipe Details Here--></span>
-                            </div>
-                        </div>
-                    </div>
+        #instructions {
+            text-align: center;
+            padding: 20px;
+        }
 
-                    
-                </div>
-            </main>
-        </div>            
-    </Body>
+        #bottom-content {
+            position: relative;
+            top: -50px; /* Adjust the positioning as needed */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .bottom-image {
+            max-width: 200px;
+            max-height: 150px;
+        }
+
+        .text-box {
+            max-width: 200px;
+            padding: 10px;
+            background-color: #fff; /* White background for text boxes */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="banner">
+        <h1>Welcome to Your Recipes</h1>
+    </div>
+
+    <div id="search-container">
+        <p>Enter Ingredients here</p>
+        <input type="text" id="search-bar" placeholder="Search...">
+    </div>
+
+
+    <div id="bottom-content">
+       
+        <div class="text-box">
+            <img src="your-image1.jpg" alt="Image 1" class="bottom-image">
+        </div>
+        <div class="text-box">
+            <p>Text Box 1</p>
+        </div>
+        <div class="text-box">
+            <p>Text Box 1</p>
+        </div>
+        <div class="text-box">
+            <img src="your-image2.jpg" alt="Image 2" class="bottom-image">
+        </div>
+        
+    </div>
+
+</body>
 </html>
+
+<!--test comment-->
