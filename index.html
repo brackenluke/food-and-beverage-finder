@@ -16,32 +16,24 @@
                 </div>
             </div>
         </div>
-
+            <!-- Search input-->
         <div class="flex w-fit p-3 mt-2 mx-auto text-center border">
             <div>
                 <div>
-                    <p>Enter Ingredients here</p>
+                    <input type="text" id="search-bar" placeholder="Enter Ingredients here...">
                 </div>
 
                 <div>
-                    <input type="text" id="search-bar" placeholder="Search...">
+                    <!--please add a stlye to the button to make it look nice-->
+                    <button id ="submit-meals" class="btn" type="button">Search Meals</button>
+                    <button id ="submit-drinks" class="btn-drink" type="button">Search Drinks</button>
                 </div>
             </div>
         </div>
-
-        <div> 
-            <div class="flex justify-start">
-                <div class="">
-                    <div>
-                        <img src="your-image1.jpg" alt="Image 1" class="bottom-image">
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <p>Text Box 1</p>
-                    </div>
-                </div>
-            </div>
+            <!--section for meals (please addd styles after making sure the search works)-->
+        <section id="meals-result" class="">
+            <h4 id="no-meals"></h4>
+        </section>
             <div class="flex justify-end">
                 <div>
                     <div>
@@ -58,6 +50,7 @@
 
     </body>
 </div>
+<script src="./assets/Meals.js"></script>
 </html>
 
 <!--new comment-->
