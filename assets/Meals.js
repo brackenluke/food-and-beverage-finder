@@ -11,7 +11,7 @@ const creatMealInfoDiv = (meal, mealInput) => {
     const mealName = meal.strMeal;
     const mealInfo = `
         <a href="#meal-details-section" style="text-decoration: none; color: black;">
-            <div onclick="getMealDetails(${meal.idMeal})" class="card border-0 shadow cursor" style="width: 18rem; border-radius: 10px">
+            <div onclick="getMealDetails(${meal.idMeal})" class="card border-0 shadow-lg cursor bg-green-500 hover:bg-blue-700 font-bold" style="width: 18rem; border-radius: 10px">
                 <img src="${thumbnail}" class="card-img-top" style="width: 18rem; border-radius: 10px 10px 0 0" alt="...">
                 <div class="card-body">
                     <h5 class="card-title text-center">${mealName}</h5>
@@ -69,12 +69,12 @@ const showMealDetailsDiv = data => {
 
     // Set Meal Details Div Structure
     RecipieDetailSection.innerHTML = `
-        <div id="recipie-details" class="card px-0 pb-1 border-0 shadow col-xm-12 col-sm-12 col-md-6" style="border-radius: 10px;">
+        <div id="recipie-details" class="card p-4 border-0 shadow col-xm-12 col-sm-12 col-md-6 bg-green-500 font-bold" style="border-radius: 10px;">
             <img src="${mealPhoto}" class="card-img-top" style="border-radius: 10px 10px 0 0;" alt=" ...">
             <div class="card-body">
-                <h2 class="card-title text-center my-3">${mealName}</h2>
+                <h2 class="card-title text-center my-3 p-2">${mealName}</h2>
                 <hr>
-                <h5 class="card-title mt-4">Meal Ingredients</h5>
+                <h5 class="card-title mt-4 p-2">Meal Ingredients</h5>
                 <div id="recipie-ingredients"></div>
                 <p>${instructions}
                 <div> 

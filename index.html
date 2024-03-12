@@ -9,7 +9,7 @@
 </head>
 <div class="font-serif">
     <body>
-        <div class="flex text-5xl border place-content-center">
+        <div class="flex text-5xl border-4 place-content-center">
             <div class="p-2">
                 <div>
                     <h1>Welcome to Your Recipes</h1>
@@ -23,25 +23,25 @@
                     <input type="text" id="search-bar" placeholder="Enter Ingredients here...">
                 </div>
 
-                <div class="p-2">
+                <div class="p-2 bg-gray">
                     <!--please add a stlye to the button to make it look nice-->
-                    <div class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    <div class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded outline">
                         <button id ="submit-meals" class="btn" type="button">Search Meals</button>
                     </div>
-                    <div class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    <div class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded outline">
                         <button id ="submit-drinks" class="btn-drink" type="button">Search Drinks</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="max-w-sm rounded overflow-hidden shadow-lg place-content-center>"
+        <div class="min-w-sm rounded overflow-hidden shadow-lg place-content-center">
               <!--will give more info when clicking a meal card-->
           <section id="recipies-information"></section>
               <!--section for meals (please addd styles after making sure the search works)-->
-          <section id="result" class="text-gray-700 text-base">
+          <section id="result" class="p-4 text-base grid grid-cols-3 grid-rows-3 gap-1 place-items-center shadow-lg cursor font-bold">
               <h4 id="no-meals"></h4>
               <h4 id="no-drinks"></h4>
-          </section>>
+          </section>
         </div>
       
     </body>
