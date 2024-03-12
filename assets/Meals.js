@@ -10,6 +10,8 @@ const RecipieDetailSection = document.querySelector("#recipies-information");
 const creatMealInfoDiv = (meal) => {
     const thumbnail = meal.strMealThumb;
     const mealName = meal.strMeal;
+    //This will create the atual inner html data to be diplayed using data
+    //Line 17 holds onclick function to call the getMealDetails function when clicking on a meal card
     const mealInfo = `
         <a href="#meal-details-section" style="text-decoration: none; color: black;">
             <div onclick="getMealDetails(${meal.idMeal})" class="card border-0 shadow-lg cursor bg-green-500 hover:bg-blue-700 font-bold" style="width: 18rem; border-radius: 10px">
@@ -30,6 +32,7 @@ const creatMealInfoDiv = (meal) => {
     mealInfoSec.appendChild(mealInfoDiv);
 }
 
+// used to get the elements needed from the array. 
 const showMealInfo = (data, mealInput) => {
     const meal = data.meals;
 
@@ -70,6 +73,7 @@ const showMealDetailsDiv = data => {
     const instructions = meal.strInstructions;
 
     // Set Meal Details Div Structure
+    // used to style and display whenever a card is clicked on the site
     RecipieDetailSection.innerHTML = `
         <div id="recipie-details" class="card p-4 border-0 shadow col-xm-12 col-sm-12 col-md-6 bg-green-500 font-bold" style="border-radius: 10px;">
             <img src="${mealPhoto}" class="card-img-top" style="border-radius: 10px 10px 0 0;" alt=" ...">
@@ -83,7 +87,7 @@ const showMealDetailsDiv = data => {
             </div>
         </div>
     `
-    // this element is created in the created div structure
+    
     const recipieIngredients = document.getElementById('recipie-ingredients');
 
     // Set Contents of Each Paragraph Inside Meal Details Div Structure
@@ -111,6 +115,7 @@ const getMealDetails = mealID => {
 const createDrinkInfoDiv = (drink) => {
     const DrinkThumbnail = drink.strDrinkThumb;
     const DrinkName = drink.strDrink;
+    //line 121 contains functions to give more details when clicking a drink card
     const drinkInfo = `
     <a href="#meal-details-section" style="text-decoration: none; color: black;">
         <div onclick="getDrinkDetails(${drink.idDrink})" class="card border-0 shadow-lg cursor bg-green-500 hover:bg-blue-700 font-bold" style="width: 18rem; border-radius: 10px">
@@ -132,7 +137,7 @@ const createDrinkInfoDiv = (drink) => {
     mealInfoSec.appendChild(drinkInfoDiv);
 }
 
-
+// breaks doesn the array for us to use the elements within for the drink cards
 const showDrinkInfo = (data, DrinkInput) => {
     const drink = data.drinks;
 
@@ -173,7 +178,8 @@ const ShowDrinkRecipieDiv = data => {
    const drinkName = drink.strDrink;
    const drinkInstructions = drink.strInstructions;
    const glass = drink.strGlass;
-
+    // Set Drink Details Div Structure
+    // This is what will be placed within the inner html when a drink card is selected
    RecipieDetailSection.innerHTML = `
    <div id="recipie-details" class="card p-4 border-0 shadow col-xm-12 col-sm-12 col-md-6 bg-green-500 font-bold" style="border-radius: 10px;">
        <img src="${drinkPhoto}" class="card-img-top" style="border-radius: 10px 10px 0 0;" alt=" ...">
@@ -203,6 +209,7 @@ const recipieIngredients = document.getElementById('recipie-ingredients');
     }
 }
 
+// calls api using the id to get more details for the show drink recipie div
 const getDrinkDetails = idDrink => {
     RecipieDetailSection.innerHTML = ``;
 
