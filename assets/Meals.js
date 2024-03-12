@@ -74,7 +74,7 @@ const showMealDetailsDiv = data => {
             <div class="card-body">
                 <h2 class="card-title text-center my-3 p-2">${mealName}</h2>
                 <hr>
-                <h5 class="card-title mt-4 p-2">Meal Ingredients</h5>
+                <h5 class="card-title text-center mt-4 p-2">Meal Ingredients</h5>
                 <div id="recipie-ingredients"></div>
                 <p>${instructions}
                 <div> 
