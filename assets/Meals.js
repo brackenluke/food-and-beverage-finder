@@ -78,7 +78,7 @@ const showMealDetailsDiv = data => {
                 <hr>
                 <h5 class="card-title text-center mt-4 p-2">Meal Ingredients</h5>
                 <div id="recipie-ingredients"></div>
-                <p>${instructions}
+                <p>Instructions: ${instructions}
                 <div> 
             </div>
         </div>
@@ -113,7 +113,7 @@ const createDrinkInfoDiv = (drink) => {
     const DrinkName = drink.strDrink;
     const drinkInfo = `
     <a href="#meal-details-section" style="text-decoration: none; color: black;">
-        <div onclick="SearchDrink(${drink.idDrink})" class="card border-0 shadow-lg cursor bg-green-500 hover:bg-blue-700 font-bold" style="width: 18rem; border-radius: 10px">
+        <div onclick="getDrinkDetails(${drink.idDrink})" class="card border-0 shadow-lg cursor bg-green-500 hover:bg-blue-700 font-bold" style="width: 18rem; border-radius: 10px">
             <img src="${DrinkThumbnail}" class="card-img-top" style="width: 18rem; border-radius: 10px 10px 0 0" alt="...">
             <div class="card-body">
                 <h5 class="card-title text-center">${DrinkName}</h5>
@@ -175,19 +175,19 @@ const ShowDrinkRecipieDiv = data => {
    const glass = drink.strGlass;
 
    RecipieDetailSection.innerHTML = `
-   <div id="recipie-details" class="card px-0 pb-1 border-0 shadow col-xm-12 col-sm-12 col-md-6" style="border-radius: 10px;">
+   <div id="recipie-details" class="card p-4 border-0 shadow col-xm-12 col-sm-12 col-md-6 bg-green-500 font-bold" style="border-radius: 10px;">
        <img src="${drinkPhoto}" class="card-img-top" style="border-radius: 10px 10px 0 0;" alt=" ...">
        <div class="card-body">
-           <h2 class="card-title text-center my-3">${drinkName}</h2>
+           <h2 class="card-title text-center my-3 p-2">${drinkName}</h2>
            <hr>
-           <h5 class="card-title mt-4">Meal Ingredients</h5>
+           <h5 class="card-title text-center mt-4 p-2">Meal Ingredients</h5>
            <div id="recipie-ingredients"></div>
-           <p>${drinkInstructions}
+           <p>Instructions: ${drinkInstructions}
            <p>Glass: ${glass}
            <div> 
        </div>
    </div>
-`;
+`
 
 const recipieIngredients = document.getElementById('recipie-ingredients');
 
@@ -206,9 +206,10 @@ const recipieIngredients = document.getElementById('recipie-ingredients');
 const getDrinkDetails = idDrink => {
     RecipieDetailSection.innerHTML = ``;
 
-    const apiUrl = `www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${idDrink}`
+    const apiUrl = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${idDrink}`
     fetch(apiUrl).then(res => res.json()).then(data =>
         ShowDrinkRecipieDiv(data));
+        console.log(data);
 }
 
 //event listeners
