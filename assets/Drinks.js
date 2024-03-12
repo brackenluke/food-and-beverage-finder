@@ -1,8 +1,8 @@
 // Global const from html
-const SearchMealBTN = document.querySelector("#submit-drinks");
-const ingreientInputE1 = document.querySelector("#search-bar");
-const mealInfoSec = document.querySelector("#drink-result");
-const noMealInfo = document.querySelector("#no-meals");
+const SearchDrinkBTN = document.querySelector("#submit-drinks");
+const ingreientInputE2 = document.querySelector("#search-bar");
+const drinkInfoSec = document.querySelector("#drink-result");
+const nodrinkInfo = document.querySelector("#no-meals");
 
 // Creates the actual div card to be placed onto the html
 const creatMealInfoDiv = (meal, mealInput) => {
@@ -41,15 +41,15 @@ const showMealInfo = (data, mealInput) => {
 }
 
 // Fetches the api for the info
-const SearchMeal = () => {
-    const mealInput = ingreientInputE1.value.trim()
-    console.log(mealInput);
-    if(mealInput) {
+const SearchDrink = () => {
+    const drinkInput = ingreientInputE1.value.trim()
+    console.log(drinkInput);
+    if(drinkInput) {
         // clears past items
         noMealInfo.innerText = ``;
         mealInfoSec.innerText = ``;
         // fetch the url for data
-        const urlAPI = `https://www.themealdb.com/api/json/v1/1/search.php?s= ${mealInput}`;
+        const urlAPI = `www.thecocktaildb.com/api/json/v1/1/search.php?i=${mealInput}`;
         fetch(urlAPI).then(res => res.json()).then(data => {
             showMealInfo(data);
             console.log(data); // see what info is being pulled in console
@@ -59,4 +59,4 @@ const SearchMeal = () => {
     }
 }
 //event listeners
-SearchMealBTN.addEventListener("click", SearchMeal);
+SearchDrinkBTN.addEventListener("click", SearchDrink);
