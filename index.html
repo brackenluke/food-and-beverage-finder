@@ -10,7 +10,7 @@
 <div class="font-serif">
     <body>
         <div class="flex text-5xl border place-content-center">
-            <div class="">
+            <div class="p-2">
                 <div>
                     <h1>Welcome to Your Recipes</h1>
                 </div>
@@ -23,21 +23,27 @@
                     <input type="text" id="search-bar" placeholder="Enter Ingredients here...">
                 </div>
 
-                <div>
+                <div class="p-2">
                     <!--please add a stlye to the button to make it look nice-->
-                    <button id ="submit-meals" class="btn" type="button">Search Meals</button>
-                    <button id ="submit-drinks" class="btn-drink" type="button">Search Drinks</button>
+                    <div class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        <button id ="submit-meals" class="btn" type="button">Search Meals</button>
+                    </div>
+                    <div class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        <button id ="submit-drinks" class="btn-drink" type="button">Search Drinks</button>
+                    </div>
                 </div>
             </div>
         </div>
-            <!--will give more info when clicking a meal card-->
-        <section id="recipies-information"></section>
-            <!--section for meals (please addd styles after making sure the search works)-->
-        <section id="result" class="">
-            <h4 id="no-meals"></h4>
-            <h4 id="no-drinks"></h4>
-        </section>>
-
+        <div class="max-w-sm rounded overflow-hidden shadow-lg place-content-center>
+              <!--will give more info when clicking a meal card-->
+          <section id="recipies-information"></section>
+              <!--section for meals (please addd styles after making sure the search works)-->
+          <section id="result" class="text-gray-700 text-base">
+              <h4 id="no-meals"></h4>
+              <h4 id="no-drinks"></h4>
+          </section>>
+        </div>
+      
     </body>
 </div>
 <script src="./assets/Meals.js"></script>
