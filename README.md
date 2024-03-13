@@ -16,11 +16,11 @@ THEN recipes are generated.
 WHEN the recipes are selected.
 
 THEN text will appear with the necessary ingredients and recipe instructions.
-‘’’
+
 
 ## Acceptance Criteria
-‘’’
- CREATE a webpage that follows the base idea of a food and drink recipe finder.
+
+CREATE a webpage that follows the base idea of a food and drink recipe finder.
 
 CREATE a GitHub Repository
 
